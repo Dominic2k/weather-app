@@ -1,107 +1,111 @@
-/* Import Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background: #E3F2FD;
+  background: #f1f5f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-h1 {
-  background: #5372F0;
-  font-size: 1.75rem;
+header {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 18px 0;
-  color: #fff;
+  font-size: 1.8rem;
 }
 
-.container {
+.main-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
   display: flex;
-  flex-wrap: wrap; /* Allow elements to wrap to next line */
-  justify-content: center; /* Center items horizontally */
-  gap: 35px;
-  padding: 30px;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.weather-input {
-  width: 100%; /* Occupy full width on small screens */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.weather-input input {
-  height: 46px;
+.input-card h2,
+.weather-card h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #2563eb;
+}
+
+.city-input {
   width: 100%;
-  outline: none;
-  font-size: 1.07rem;
-  padding: 0 17px;
-  margin: 10px 0 20px 0;
-  border-radius: 4px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-.weather-input input:focus {
-  padding: 0 16px;
-  border: 2px solid #5372F0;
-}
-
-.weather-input .separator {
-  display: none; /* Hide separator on small screens */
-}
-
-.weather-input button,
-.weather-input .location-btn {
+button {
   width: 100%;
-}
-
-.weather-data {
-  width: 100%;
-}
-
-.weather-data .current-weather {
+  padding: 12px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
   color: #fff;
-  background: #5372F0;
-  border-radius: 5px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Stack details vertically on small screens */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
-.current-weather h2 {
-  font-weight: 700;
-  font-size: 1.5rem; /* Decrease font size for better readability on small screens */
+button:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
 }
 
-.weather-data h6 {
-  font-size: 0.9rem; /* Decrease font size for better readability on small screens */
+.location-btn {
+  background: linear-gradient(90deg, #10b981, #34d399);
 }
 
-.weather-cards {
-  display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to next line */
-  justify-content: space-between; /* Evenly distribute cards on larger screens */
+.location-btn:hover {
+  background: linear-gradient(90deg, #059669, #10b981);
 }
 
-.weather-cards .card {
-  width: calc(50% - 10px); /* Occupy half width on small screens */
-  margin-bottom: 20px;
+.weather-card p {
+  margin: 10px 0;
+  font-size: 1.05rem;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .container {
-    padding: 20px; /* Decrease padding on small screens */
+footer {
+  text-align: center;
+  margin: 30px 0 10px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .main-container {
+    padding: 0 15px;
   }
 
-  .weather-input {
-    width: 100%;
+  .card {
+    padding: 20px 15px;
   }
 
-  .weather-cards .card {
-    width: 100%; /* Occupy full width on small screens */
+  button {
+    font-size: 0.95rem;
+  }
+
+  .weather-card p {
+    font-size: 0.95rem;
   }
 }
