@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Weather App Project</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <h1>Weather Dashboard</h1>
-    <div class="container">
-      <div class="weather-input">
-        <h3>Enter a City Name</h3>
-        <input class="city-input" id="city" type="text" placeholder="E.g., Bhopal, Mehsi, Muzaffarpur, Patna">
-        <button class="search-btn" onclick="getWeather()">Search</button>
-        <div class="separator"></div>
-        <button class="location-btn" onclick="getWeatherByLocation()">Use Current Location</button>
-      </div>
-      <div class="weather-data">
-        <div class="current-weather">
-          <div class="details">
-            <h2 id="city-name">_______ ( ______ )</h2>
-            <h6 id="temp">Temperature: __°C</h6>
-            <h6 id="wind">Wind: __ M/S</h6>
-            <h6 id="humidity">Humidity: __%</h6>
-          </div>
-        </div>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>🌤️ Weather Dashboard</h1>
+  </header>
+  <main class="main-container">
+    <section class="card input-card">
+      <h2>🔍 Search by City</h2>
+      <input type="text" id="city" class="city-input" placeholder="e.g., Hanoi, Tokyo, Paris">
+      <button onclick="getWeather()">Search</button>
+      <hr>
+      <button class="location-btn" onclick="getWeatherByLocation()">📍 Use My Location</button>
+    </section>
+
+    <section class="card weather-card">
+      <h2 id="city-name">City Name ( Country )</h2>
+      <p id="temp">🌡️ Temperature: -- °C</p>
+      <p id="wind">💨 Wind: -- m/s</p>
+      <p id="humidity">💧 Humidity: -- %</p>
+    </section>
+  </main>
+  <footer>
     <p>&copy; 2025 Phạm Đức Đạt. All rights reserved.</p>
-  </body>
+  </footer>
+</body>
 </html>
